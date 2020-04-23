@@ -1,5 +1,5 @@
-export interface Task {
-    id?:number; 
+export interface TaskModel {
     descrição: string; 
     status: boolean;
+    id?:number; 
 }

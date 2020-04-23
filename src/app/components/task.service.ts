@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Task } from './task.model';
+// import { Task } from './task.model';
 
 @Injectable({
   providedIn: 'root'
@@ -12,17 +12,15 @@ export class TaskService {
 
   constructor() { }
 
-  create(task: Task) {
-    console.log("entrou no create task");
-    this.taskObject.push(task);
-    console.log(this.taskObject);
-    // this.taskObjectFinal = Object.assign({}, this.taskObject);
-    // console.log("final object", this.taskObjectFinal);
-  } 
+  // create(task: Task) {
+  //   console.log("entrou no create task");
+  //   this.taskObject.push(task);
+  //   console.log(this.taskObject);
+  // } 
 
-  read() {
-    return this.taskObject;
-  }
+  // read() {
+  //   return this.taskObject;
+  // }
 
   delete(event){
     let index = this.taskObject.indexOf(event.target.id);
