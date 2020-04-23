@@ -1,14 +1,14 @@
 <!-- (sendTask)="sendTask($event)" -->
 <!-- <button (click)="readTask()">Mostrar tasks</button> -->
 <ul class="task-list">
-    <li *ngFor="let i of tasks" class="task-list-item">
-        <mat-card class="card-item">
+    <li *ngFor="let i of tasks; let j = index" class="task-list-item" >
+        <mat-card class="card-item" >
             <mat-card-content class="card-title">
                 {{ i.description }}
             </mat-card-content>
             <div class="icons-container">
                 <mat-checkbox class="check-box"></mat-checkbox>
-                <button mat-icon-button>
+                <button mat-icon-button (click)="delete($event)" id="{{i}}">
                     <mat-icon>delete</mat-icon>
                 </button>
             </div>
