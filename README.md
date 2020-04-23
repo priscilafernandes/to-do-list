@@ -2,7 +2,8 @@
 
 **Etapas para desenvolvimento do ToDo List - Grupo Ingrid, Nickolas e Caio**
 
-**Etapas para desenvolvimento do ToDo List - Grupo Caio, Diego e Priscila**
+**Etapas para desenvolvimento do To-do-List - Grupo V2 Caio, Diego e Priscila**
+
 * Escolher o layout do projeto
 * Criar o projeto
 * Criar o componente do todo list (input de dados)
