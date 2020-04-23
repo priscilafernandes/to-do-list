@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 // import { Task } from './task.model';
 
+// TODO: refatorar para funcionamento da api ou criar outro serviço
+
 @Injectable({
   providedIn: 'root'
 })
