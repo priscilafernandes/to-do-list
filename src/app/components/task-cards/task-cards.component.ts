@@ -1,5 +1,7 @@
 import { TaskService } from './../task.service';
 import { Component, OnInit } from '@angular/core';
+import { BroadcastTodoService } from './../broadcast-todo.service'
+import { TodoModel } from './../todo-model'
 
 @Component({
   selector: 'app-task-cards',
@@ -8,27 +10,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TaskCardsComponent implements OnInit {
 
-  tasks:any;
+  todos: TodoModel[] = []
   
-  constructor(private taskService:TaskService) { }
+  constructor(private taskService:TaskService, private _link: BroadcastTodoService) { 
+  }
 
   ngOnInit(): void {
-    this.readTask();
+    this._link.receiveTodo.subscribe((result) => {
+      let task = new TodoModel(result, false);
+      this.todos.push(task);
+    });
   
-  }
-  
-  readTask(){
-    this.tasks = this.taskService.read();
-    console.log(this.tasks);
   }
 
   delete(event){
-    this.taskService.delete(event);
-    console.log(this.tasks);
+    console.log(`event target id: ${event.target.id}`);
+    let index = event.target.id;
+    this.todos.splice(index, 1);
+
   }
-  
-  // public sendTask(input:any) : void {
-  //   this.tasks.push(input.tasks)
-  // }
 
 }

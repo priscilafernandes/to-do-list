@@ -16,6 +16,8 @@ import {MatButtonModule} from '@angular/material/button';
 import { TaskCardsComponent } from './components/task-cards/task-cards.component';
 import { FormsModule } from '@angular/forms';
 
+import { BroadcastTodoService } from './components/broadcast-todo.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +38,7 @@ import { FormsModule } from '@angular/forms';
     MatIconModule,
     FormsModule
   ],
-  providers: [],
+  providers: [BroadcastTodoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
