@@ -46,8 +46,18 @@ export class TaskCardsComponent implements OnInit {
 
   delete(event){
     // this.taskService.delete(event);
-    // console.log(this.tasks);
+    console.log(`event target id: ${event.target.id}`);
+    // let index = this.todos.indexOf(event.target.id);
+    let index = event.target.id;
+    this.todos.splice(index, 1);
+
   }
+
+  // deletar(event) {
+  //   console.log(event.target.id)
+  //   let index = this.todoList.indexOf(event.target.id);
+  //   this.todoList.splice(index, 1);
+  // }
   
   // public sendTask(input:any) : void {
   //   this.tasks.push(input.tasks)
