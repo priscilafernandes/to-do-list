@@ -14,16 +14,6 @@ export class AddTaskComponent implements OnInit {
   todoInput: string
   placeholder: string = "Ex.: estudar, terminar projeto..."
 
-  mockModel = {
-    usuario: "pris1@outlook.com.br",
-    cartoes: [
-      {
-        conteudo: "Preparar a aula",
-        cor: "rgb(118, 239, 64)"
-      }
-    ]
-  }
-
   constructor(private taskService: TaskService, private _link: BroadcastTodoService, private _apiTask: ApiTaskService) { }
 
   ngOnInit(): void {
