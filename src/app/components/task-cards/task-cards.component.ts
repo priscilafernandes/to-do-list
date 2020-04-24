@@ -11,7 +11,9 @@ import { TodoModel } from './../todo-model'
 export class TaskCardsComponent implements OnInit {
 
   todos: TodoModel[] = []
+  status:boolean = false;
   
+
   constructor(private taskService:TaskService, private _link: BroadcastTodoService) { 
   }
 
@@ -24,10 +26,21 @@ export class TaskCardsComponent implements OnInit {
   }
 
   delete(event){
-    console.log(`event target id: ${event.target.id}`);
     let index = event.target.id;
     this.todos.splice(index, 1);
+    console.log(`event target id delete: ${event.target.id}`);
+  }
 
+  check(event){
+    let index = event.target.id;
+    // console.log(`event target id: ${event.target.id}`);
+    // console.log(`event target: ${event.target}`);
+    // console.log(`event todos: ${this.todos}`);
+    // console.log(`event todos index: ${this.todos[index]}`);
+    // console.log(`event todos status: ${this.todos[index].status}`);
+    // this.todos[index].status = false;
+    // this.todos[index].status = !this.todos[index].status;
+    this.status = !this.status;
   }
 
 }

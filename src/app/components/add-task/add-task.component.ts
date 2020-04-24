@@ -9,7 +9,7 @@ import { BroadcastTodoService } from './../broadcast-todo.service'
 })
 export class AddTaskComponent implements OnInit {
 
-  todoInput: string
+  todoInput: string 
   placeholder: string = "Ex.: estudar, terminar projeto..."
 
   constructor(private taskService: TaskService, private _link: BroadcastTodoService) { }
@@ -24,6 +24,7 @@ export class AddTaskComponent implements OnInit {
   sendTodoData(todo:string) {
     if (todo != '') {
       this._link.passTodoValue(todo);
+      // this.todoInput = null;
     } else {
       this.placeholder = "O campo não pode estar vazio!"
     }
@@ -34,6 +35,7 @@ export class AddTaskComponent implements OnInit {
       this.placeholder = "O campo não pode estar vazio!"
     } else {
       this._link.passTodoValue(this.todoInput);
+      // this.todoInput = null;
     }
   }
 

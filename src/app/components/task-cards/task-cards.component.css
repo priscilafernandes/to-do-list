@@ -27,6 +27,12 @@
   margin: 10px;
 }
 
+.done{
+  background-color: red;
+}
+
+
+
 .icons-container {
   display: flex;
   justify-content: space-between;
@@ -54,3 +60,4 @@
   margin-top: 5px;
   overflow: auto;
 }
+

@@ -1,9 +1,9 @@
 <ul class="task-list">
   <li *ngFor="let todo of todos; let i = index" class="task-list-item">
-    <mat-card class="card-item">
+    <mat-card class="card-item ">
 
-      <div class="icons-container">
-        <mat-checkbox class="check-box"></mat-checkbox>
+      <div class="icons-container" >
+        <mat-checkbox id="{{i}}" (click)="check($event)" class="check-box"></mat-checkbox>
         <div>
           <mat-icon id="{{i}}" class="edit-icon">edit</mat-icon>
           <mat-icon id="{{i}}" (click)="delete($event)" class="delete-icon">delete</mat-icon>
@@ -14,3 +14,5 @@
     </mat-card>
   </li>
 </ul>
+
+<!-- [class.done]="status ? 'undone' : 'done'" -->
