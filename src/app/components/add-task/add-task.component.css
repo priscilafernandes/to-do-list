@@ -28,3 +28,7 @@
   cursor: pointer;
   font-size: 2em;
 }
+
+.mat-icon:hover {
+  color: #ff4081;
+}
