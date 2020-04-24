@@ -1,22 +1,30 @@
 .container {
-  display: flex;
-  justify-content: center;
-  margin: 10px auto;
-  height: 5vh;
-  width: 50%;
-  border-radius: 10px;
-  border: none;
-  background-color: transparent;
-  font: large;
+  width: 40vw;
+  margin: 2em 2em;
 }
 
 .material-Input {
   width: 100%;
-  color: rgb(90, 90, 90);
+  color: #fff;
+  border-color: #fff;
+}
+
+.tasks-label {
+  color: #fff;
+  font-size: 1.25em;
+}
+
+.input-tasks {
+  font-size: 1.5em;
+  padding: 5px 0;
+}
+
+::placeholder {
+  color: #fff;
 }
 
 .mat-icon {
-  color: #3f51b5;
+  color: #fff;
   cursor: pointer;
+  font-size: 2em;
 }
-

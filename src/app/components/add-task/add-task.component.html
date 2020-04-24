@@ -1,7 +1,16 @@
 <div class="container">
   <mat-form-field class="material-Input">
-    <mat-label>Digite a sua tarefa...</mat-label>
-    <input type="text" matInput placeholder="{{ placeholder }}" name="tasks" (keyup.enter)="sendTodoData($event.target.value)" (change)="changeTodo($event)">
+    <mat-label class="tasks-label">Digite sua tarefa...</mat-label>
+
+    <input
+      matInput
+      type="text"
+      name="tasks"
+      class="input-tasks"
+      placeholder="{{placeholder}}"
+      (keyup.enter)="sendTodoData($event.target.value)"
+      (change)="changeTodo($event)">
+
     <mat-icon matSuffix (click)="sendTodoDataClick()">add</mat-icon>
   </mat-form-field>
 </div>

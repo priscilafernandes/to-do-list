@@ -10,7 +10,7 @@ import { BroadcastTodoService } from './../broadcast-todo.service'
 export class AddTaskComponent implements OnInit {
 
   todoInput: string
-  placeholder: string = "Estudar, terminar projeto..."
+  placeholder: string = "Ex.: estudar, terminar projeto..."
 
   constructor(private taskService: TaskService, private _link: BroadcastTodoService) { }
 
