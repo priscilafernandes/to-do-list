@@ -19,10 +19,14 @@ export class TaskCardsComponent implements OnInit {
 
   ngOnInit(): void {
     this._link.receiveTodo.subscribe((result) => {
-      let task = new TodoModel(result, false);
+      let task = new TodoModel(result, false, false);
       this.todos.push(task);
     });
   
+  }
+
+  edit(todo){
+    todo.isEditable = !todo.isEditable;
   }
 
   delete(event){

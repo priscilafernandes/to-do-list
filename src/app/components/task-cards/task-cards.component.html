@@ -5,14 +5,22 @@
       <div class="icons-container" >
         <mat-checkbox id="{{i}}" (click)="check($event)" class="check-box"></mat-checkbox>
         <div>
-          <mat-icon id="{{i}}" class="edit-icon">edit</mat-icon>
+          <mat-icon id="{{i}}" class="edit-icon" (click)="edit(todo)">edit</mat-icon>
           <mat-icon id="{{i}}" (click)="delete($event)" class="delete-icon">delete</mat-icon>
         </div>
       </div>
+      
+      <span *ngIf="todo.isEditable; then condition1 else condition2"></span>
+      <ng-template #condition1>
+          <input matInput type="text" class="todo-edit" [(ngModel)]="todo.description" (keyup.enter)="edit(todo)"
+            value="{{todo.title}}">
+      </ng-template>
 
-      <mat-card-content class="card-title">{{ todo.description }}</mat-card-content>
+      <ng-template #condition2>
+        <mat-card-content class="card-title">{{ todo.description }}</mat-card-content>
+      </ng-template>
+
     </mat-card>
   </li>
 </ul>
 
-<!-- [class.done]="status ? 'undone' : 'done'" -->
