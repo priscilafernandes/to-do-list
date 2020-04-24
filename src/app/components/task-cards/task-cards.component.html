@@ -4,7 +4,10 @@
 
       <div class="icons-container">
         <mat-checkbox class="check-box"></mat-checkbox>
-        <mat-icon id="{{i}}" (click)="delete($event)">delete</mat-icon>
+        <div>
+          <mat-icon id="{{i}}" class="edit-icon">edit</mat-icon>
+          <mat-icon id="{{i}}" (click)="delete($event)" class="delete-icon">delete</mat-icon>
+        </div>
       </div>
 
       <mat-card-content class="card-title">{{ todo.description }}</mat-card-content>

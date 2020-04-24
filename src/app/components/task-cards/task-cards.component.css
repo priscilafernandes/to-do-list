@@ -35,13 +35,18 @@
   margin-bottom: 10px;
 }
 
-.mat-icon {
+.edit-icon, .delete-icon {
   height: 20px;
   width: 20px;
+  margin-left: 5px;
   cursor: pointer;
 }
 
-.mat-icon:hover {
+.edit-icon:hover {
+  color: deepskyblue;
+}
+
+.delete-icon:hover {
   color: #ff4081;
 }
 
