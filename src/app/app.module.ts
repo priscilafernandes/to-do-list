@@ -17,6 +17,8 @@ import { TaskCardsComponent } from './components/task-cards/task-cards.component
 import { FormsModule } from '@angular/forms';
 
 import { BroadcastTodoService } from './components/broadcast-todo.service';
+import { ApiTaskService } from "../app/services/api-task.service";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -36,9 +38,10 @@ import { BroadcastTodoService } from './components/broadcast-todo.service';
     MatCheckboxModule,
     MatButtonModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [BroadcastTodoService],
+  providers: [BroadcastTodoService, ApiTaskService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
