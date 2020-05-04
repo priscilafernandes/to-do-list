@@ -1,7 +1,6 @@
-import { TaskService } from './../task.service';
 import { Component, OnInit } from '@angular/core';
-import { BroadcastTodoService } from './../broadcast-todo.service'
-import { TodoModel } from './../todo-model'
+import { BroadcastTodoService } from '../../services/broadcast-todo.service'
+import { TodoModel } from '../../models/todo-model'
 
 @Component({
   selector: 'app-task-cards',
@@ -9,12 +8,10 @@ import { TodoModel } from './../todo-model'
   styleUrls: ['./task-cards.component.css']
 })
 export class TaskCardsComponent implements OnInit {
-
   todos: TodoModel[] = []
   status:boolean = false;
-  
 
-  constructor(private taskService:TaskService, private _link: BroadcastTodoService) { 
+  constructor(private _link: BroadcastTodoService) {
   }
 
   ngOnInit(): void {
@@ -22,7 +19,7 @@ export class TaskCardsComponent implements OnInit {
       let task = new TodoModel(result, false, false);
       this.todos.push(task);
     });
-  
+
   }
 
   edit(todo){

@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { TaskService } from './../task.service'; // TODO: refatorar TaskService
-import { BroadcastTodoService } from './../broadcast-todo.service';
+import { BroadcastTodoService } from '../../services/broadcast-todo.service';
 import { ApiTaskService } from "../../services/api-task.service";
-import { TodoModel } from "../todo-model";
 
 @Component({
   selector: 'app-add-task',
@@ -14,7 +12,7 @@ export class AddTaskComponent implements OnInit {
   todoInput: string
   placeholder: string = "Ex.: estudar, terminar projeto..."
 
-  constructor(private taskService: TaskService, private _link: BroadcastTodoService, private _apiTask: ApiTaskService) { }
+  constructor(private _link: BroadcastTodoService, private _apiTask: ApiTaskService) { }
 
   ngOnInit(): void {
   }

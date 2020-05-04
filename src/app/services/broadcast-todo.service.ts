@@ -11,5 +11,4 @@ export class BroadcastTodoService {
   passTodoValue(todo_content:string){
     this.receiveTodo.emit(todo_content);
   }
-
 }

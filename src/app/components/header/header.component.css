@@ -1,0 +1,115 @@
+.header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 20px auto;
+  padding-bottom: 5px;
+  width: 150px;
+  height: 70px;
+  background: white;
+  border-radius: 10px;
+  transition: 1s box-shadow;
+  border: solid 2px;
+  border-color: #3f51b5 #ff4081 #ff4081 #3f51b5;
+}
+
+.header:hover {
+  box-shadow: 0 5px 35px 0px rgba(0, 0, 0, .1);
+}
+
+.header:hover:before, .header:hover:after {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 70px;
+  background: #ff4081;
+  opacity: 0.5;
+  border-radius: 10px;
+  z-index: -1;
+  animation: 1s clockwise infinite;
+}
+
+.header:hover:after {
+  background: #3f51b5;
+  opacity: 0.5;
+  animation: 2s counterclockwise infinite;
+}
+
+@keyframes clockwise {
+  0% {
+    top: -5px;
+    left: 0;
+  }
+  12% {
+    top: -2px;
+    left: 2px;
+  }
+  25% {
+    top: 0;
+    left: 5px;
+  }
+  37% {
+    top: 2px;
+    left: 2px;
+  }
+  50% {
+    top: 5px;
+    left: 0;
+  }
+  62% {
+    top: 2px;
+    left: -2px;
+  }
+  75% {
+    top: 0;
+    left: -5px;
+  }
+  87% {
+    top: -2px;
+    left: -2px;
+  }
+  100% {
+    top: -5px;
+    left: 0;
+  }
+}
+
+@keyframes counterclockwise {
+  0% {
+    top: -5px;
+    right: 0;
+  }
+  12% {
+    top: -2px;
+    right: 2px;
+  }
+  25% {
+    top: 0;
+    right: 5px;
+  }
+  37% {
+    top: 2px;
+    right: 2px;
+  }
+  50% {
+    top: 5px;
+    right: 0;
+  }
+  62% {
+    top: 2px;
+    right: -2px;
+  }
+  75% {
+    top: 0;
+    right: -5px;
+  }
+  87% {
+    top: -2px;
+    right: -2px;
+  }
+  100% {
+    top: -5px;
+    right: 0;
+  }
+}
