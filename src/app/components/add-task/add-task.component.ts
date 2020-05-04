@@ -8,7 +8,6 @@ import { ApiTaskService } from "../../services/api-task.service";
   styleUrls: ['./add-task.component.css']
 })
 export class AddTaskComponent implements OnInit {
-
   todoInput: string
   placeholder: string = "Ex.: estudar, terminar projeto..."
 
@@ -36,5 +35,4 @@ export class AddTaskComponent implements OnInit {
       this._link.passTodoValue(this.todoInput);
     }
   }
-
 }

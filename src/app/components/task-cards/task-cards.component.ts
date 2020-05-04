@@ -19,7 +19,6 @@ export class TaskCardsComponent implements OnInit {
       let task = new TodoModel(result, false, false);
       this.todos.push(task);
     });
-
   }
 
   edit(todo){
@@ -35,5 +34,4 @@ export class TaskCardsComponent implements OnInit {
   check(todo){
     todo.status = !todo.status;
   }
-
 }
